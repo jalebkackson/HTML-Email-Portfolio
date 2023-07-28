@@ -18,12 +18,12 @@ body {
 }
 
 .navbar {
-  background: rgb(149, 75, 252);
+  background: rgba(255, 238, 0, 0.495);
+  border-bottom: 1px yellow;
   /* background: linear-gradient(
     rgba(255, 184, 76, 1) 50%,
     rgb(169, 226, 236) 80%
   ); */
-  background: radial-gradient(black 20%);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -48,7 +48,7 @@ a.navbar-brand:hover {
 }
 
 nav .navbar-nav li a:hover {
-  color: rgb(254, 66, 172);
+  color: rgb(255, 0, 119);
 }
 
 nav .navbar-nav li a {
@@ -111,7 +111,7 @@ nav .navbar-nav li a {
 
 /* Caret */
 .mySpan {
-  background-color: rgb(149, 75, 252);
+  background-color: rgb(255, 238, 0);
   color: rgb(149, 75, 252, 0);
   display: inline-block;
   animation: blinker 1s linear infinite, smoothCaret 0.18s;
