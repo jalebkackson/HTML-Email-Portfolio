@@ -1,0 +1,136 @@
+body {
+  background: rgb(255, 0, 159);
+  background: linear-gradient(
+      318deg,
+      rgba(255, 0, 159, 1) 13%,
+      rgba(255, 0, 0, 1) 52%,
+      rgba(255, 117, 0, 1) 99%
+    )
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: lin;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #f1f1f1;
+}
+
+.navbar {
+  background: rgb(149, 75, 252);
+  /* background: linear-gradient(
+    rgba(255, 184, 76, 1) 50%,
+    rgb(169, 226, 236) 80%
+  ); */
+  background: radial-gradient(black 20%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+a.navbar-brand {
+  margin-left: 15px;
+  margin-bottom: -19px;
+  margin-top: -15px;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(60, 60, 60);
+  pointer-events: none;
+  padding-bottom: 10px;
+}
+a.navbar-brand:hover {
+  pointer-events: none;
+}
+
+.nav-item {
+  padding: 0 18px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+nav .navbar-nav li a:hover {
+  color: rgb(254, 66, 172);
+}
+
+nav .navbar-nav li a {
+  color: rgb(60, 60, 60);
+  /* padding-bottom: 25px; */
+  /* text-shadow: 0 1px 6px rgb(0 0 0); */
+}
+
+.navbar-toggler {
+  margin-right: 15px;
+}
+
+.navbar-toggler {
+  /* border-color: rgb(255, 0, 174) !important; */
+}
+
+.typedMessage {
+  padding-top: 13rem;
+  padding-bottom: 3rem;
+  color: #f1f1f1;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.54);
+}
+.typedMessage h1 {
+  font-weight: 700;
+  margin-right: auto;
+}
+
+@media (min-width: 800px) {
+  .typedMessage {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 991px) {
+  .typedMessage {
+    white-space: nowrap;
+    margin-left: 0;
+  }
+}
+
+#message0 {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 799px) {
+  #message0,
+  #message1,
+  #message2 {
+    font-size: 10vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #message0,
+  #message1,
+  #message2 {
+    font-size: 78px;
+  }
+}
+
+/* Caret */
+.mySpan {
+  background-color: rgb(149, 75, 252);
+  color: rgb(149, 75, 252, 0);
+  display: inline-block;
+  animation: blinker 1s linear infinite, smoothCaret 0.18s;
+  text-shadow: none;
+}
+/* Caret smooth movement animation*/
+@keyframes smoothCaret {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+/* caret pulse blink effect */
+@keyframes blinker {
+  25% {
+    opacity: 0;
+  }
+}
