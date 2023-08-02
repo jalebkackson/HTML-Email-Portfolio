@@ -18,13 +18,8 @@ body {
 }
 
 .navbar {
-  background: rgba(255, 238, 0, 0.495);
-  border-bottom: 1px yellow;
-  /* background: linear-gradient(
-    rgba(255, 184, 76, 1) 50%,
-    rgb(169, 226, 236) 80%
-  ); */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 238, 0, 0.405);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 a.navbar-brand {
@@ -111,7 +106,7 @@ nav .navbar-nav li a {
 
 /* Caret */
 .mySpan {
-  background-color: rgb(255, 238, 0);
+  background-color: rgb(255, 196, 0);
   color: rgb(149, 75, 252, 0);
   display: inline-block;
   animation: blinker 1s linear infinite, smoothCaret 0.18s;
@@ -133,4 +128,22 @@ nav .navbar-nav li a {
   25% {
     opacity: 0;
   }
+}
+
+.contact-me-btn {
+  padding: 50px 0;
+}
+
+.btn-outline-warning {
+  color: rgb(255, 204, 0);
+  border-color: rgb(255, 179, 0);
+  padding: 10px 120px;
+}
+
+.btn-outline-warning:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.495);
 }
