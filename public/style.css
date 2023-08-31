@@ -158,8 +158,9 @@ nav .navbar-nav li a {
 }
 
 .skills-section {
-  padding: 75px;
+  padding: 75px 30px;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.495);
+  margin: auto 0;
 }
 
 .skills {
@@ -168,6 +169,7 @@ nav .navbar-nav li a {
   /* margin-left: 5%; */
 }
 
+/* skills text */
 .skills h5 {
   padding-top: 15px;
 }
@@ -175,6 +177,7 @@ nav .navbar-nav li a {
 .skill {
   padding: 40px 0;
 }
+
 .skill img {
   width: 35%;
   max-width: 150px;
