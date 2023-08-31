@@ -2,9 +2,10 @@ body {
   background: rgb(255, 0, 159);
   background: linear-gradient(
       318deg,
-      rgba(255, 0, 159, 1) 13%,
-      rgba(255, 0, 0, 1) 52%,
-      rgba(255, 117, 0, 1) 99%
+      rgba(255, 0, 159, 1) 0%,
+      rgba(255, 0, 0, 1) 45%,
+      rgba(255, 0, 0, 1) 55%,
+      rgba(255, 117, 0, 1) 100%
     )
     no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -43,7 +44,7 @@ a.navbar-brand:hover {
 }
 
 nav .navbar-nav li a:hover {
-  color: rgb(255, 0, 119);
+  color: rgb(255, 0, 149);
 }
 
 nav .navbar-nav li a {
@@ -148,5 +149,36 @@ nav .navbar-nav li a {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.495);
 }
 
-.btn-outline-warning {
+.btn-outline-warning:active {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.495);
+}
+
+.skills-section {
+  padding: 75px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.495);
+}
+
+.skills {
+  text-align: center;
+  justify-content: center;
+  /* margin-left: 5%; */
+}
+
+.skills h5 {
+  padding-top: 15px;
+}
+
+.skill {
+  padding: 40px 0;
+}
+.skill img {
+  width: 35%;
+  max-width: 150px;
+  min-width: 60px;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.495));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.495));
 }
