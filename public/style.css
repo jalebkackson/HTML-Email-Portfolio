@@ -56,11 +56,11 @@ nav .navbar-nav li a {
 .navbar-toggler {
   margin-right: 15px;
 }
-/* 
-.navbar-toggler {
-  border-color: rgb(255, 0, 174) !important;
-} */
 
+/* HERO Section */
+.hero-section {
+  height: 100vh;
+}
 .typedMessage {
   padding-top: 13rem;
   padding-bottom: 3rem;
@@ -132,7 +132,7 @@ nav .navbar-nav li a {
 }
 
 .contact-me-btn {
-  padding: 50px 0;
+  padding: 100px 0 150px 0;
 }
 
 .btn-outline-warning {
@@ -157,21 +157,55 @@ nav .navbar-nav li a {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.495);
 }
 
-.skills-section {
-  padding: 75px 30px;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.495);
+/* Skills section */
+
+/* this Section selector controls the main div of all sections */
+.section {
+  padding: 100px 30px;
+
   margin: auto 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.section-header {
+  font-size: 50px;
+  padding: 20px 0;
+  color: rgb(255, 255, 255);
+  text-shadow: 7px 7px 4px rgba(0, 0, 0, 0.495);
+}
+
+.header-line {
+  width: 60%;
+  border: 1px solid rgba(255, 179, 0, 0.831);
+  border-radius: 100%;
+  margin: auto;
+}
+
+.row-one {
+  padding-top: 40px;
+}
+
+.skills-section {
+  padding-top: 200px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0) 0%,
+      rgb(1, 61, 83) 22%,
+      /* rgba(177, 66, 1, 0.86) 35%, */ rgb(0, 0, 0, 0) 40%
+    )
+    no-repeat center center;
 }
 
 .skills {
   text-align: center;
   justify-content: center;
-  /* margin-left: 5%; */
 }
 
 /* skills text */
 .skills h5 {
   padding-top: 15px;
+  text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.495);
 }
 
 .skill {
@@ -182,6 +216,49 @@ nav .navbar-nav li a {
   width: 35%;
   max-width: 150px;
   min-width: 60px;
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.495));
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.495));
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.601));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.601));
+}
+
+/*Portfolio Section */
+.portfolio {
+  background: linear-gradient(
+      180deg,
+      rgb(255, 255, 255, 0) 0%,
+      rgb(30, 0, 53) 27%,
+      rgb(0, 0, 0) 45%
+    )
+    no-repeat center center;
+}
+
+h1.dark {
+  text-shadow: 2px 2px 7px rgba(254, 154, 194, 0.962);
+  color: rgba(255, 198, 221, 0.899);
+}
+
+.header-line-dark {
+  width: 60%;
+  border: 1px solid rgba(254, 136, 183, 0.76);
+  border-radius: 100%;
+  margin: auto;
+}
+
+.projects.row-one {
+  padding-top: 70px;
+}
+
+.project {
+  padding: 40px 0;
+}
+.project img {
+  width: 35%;
+  max-width: 150px;
+  min-width: 60px;
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 0, 212, 0.854));
+  filter: drop-shadow(0px 0px 10px rgba(255, 0, 212, 0.875));
+}
+
+.portfolio h5 {
+  text-shadow: 0px 0px 15px rgb(255, 0, 170);
+  text-shadow: 0px 0px 15px rgb(255, 0, 170);
 }
