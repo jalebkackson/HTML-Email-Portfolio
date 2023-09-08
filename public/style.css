@@ -157,12 +157,9 @@ nav .navbar-nav li a {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.495);
 }
 
-/* Skills section */
-
 /* this Section selector controls the main div of all sections */
 .section {
   padding: 100px 30px;
-
   margin: auto 0;
   text-align: center;
   justify-content: center;
@@ -184,6 +181,58 @@ nav .navbar-nav li a {
 
 .row-one {
   padding-top: 40px;
+}
+
+/* About Me */
+
+.about-me.row {
+  padding-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .bitmoji {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bitmoji-signature {
+    padding-top: -20vw;
+  }
+}
+/* signature animation */
+.signaturePath {
+  transform: translateY(5%);
+  padding-bottom: 40px;
+  stroke-dasharray: 920;
+  stroke-dashoffset: 920;
+  filter:
+  /* Glow */ drop-shadow(0px 0px 4px rgb(251 72 196))
+    drop-shadow(0px 0px 3px rgb(251 72 196))
+    drop-shadow(0px 0px 1px rgb(251 72 196)) /* Shadow */
+    drop-shadow(5px 6px 0px rgb(0 0 0));
+}
+
+.signature-animation-toggle {
+  animation: sign 1.5s 0s linear forwards, turnOn 0.8s 1.8s forwards,
+    flicker 4s 5s linear infinite;
+}
+
+.about-me-p {
+  padding-top: 50px;
+  text-align: left;
+  font-size: 19px;
+  line-height: 2;
+}
+@media screen and (min-width: 768px) {
+  .about-me-p {
+    padding-right: 50px;
+    padding-top: 9vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-me {
+    padding-right: 50px;
+  }
 }
 
 .skills-section {
@@ -261,4 +310,172 @@ h1.dark {
 .portfolio h5 {
   text-shadow: 0px 0px 15px rgb(255, 0, 170);
   text-shadow: 0px 0px 15px rgb(255, 0, 170);
+}
+
+/* animating signature action */
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* initial flicker of neon signature */
+@keyframes turnOn {
+  from {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.95;
+  }
+  70% {
+    opacity: 0.15;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* continuous flicker of signature */
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.7;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  11% {
+    opacity: 0.92;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  14% {
+    opacity: 0.9;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.85;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.8;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.8;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.8;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.73;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

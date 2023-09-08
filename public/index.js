@@ -91,3 +91,16 @@ document.querySelectorAll("#hacker").forEach((h1) => {
     }, 15);
   };
 });
+
+// Observer Togglers aka start animation on window scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // add animation class to svg path
+      document
+        .querySelector(".signaturePath")
+        .classList.add("signature-animation-toggle");
+    }
+  });
+});
+observer.observe(document.querySelector(".about-me-p"));
