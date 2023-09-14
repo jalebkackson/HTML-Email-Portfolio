@@ -92,14 +92,18 @@ document.querySelectorAll("#hacker").forEach((h1) => {
   };
 });
 
-// Observer Togglers aka start animation on window scroll
+// Observer Togglers aka start animation on window scroll ABOUT ME Section
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // add animation class to svg path
+      // svg path animation
       document
         .querySelector(".signaturePath")
         .classList.add("signature-animation-toggle");
+      // bitmoji animation
+      document.querySelector(".bitmoji").classList.add("wobble");
+      // slide animation on p
+      entry.target.classList.add("slide-in-from-right");
     }
   });
 });

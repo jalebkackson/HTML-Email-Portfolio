@@ -60,6 +60,7 @@ nav .navbar-nav li a {
 /* HERO Section */
 .hero-section {
   height: 100vh;
+  min-height: 700px;
 }
 .typedMessage {
   padding-top: 13rem;
@@ -184,7 +185,6 @@ nav .navbar-nav li a {
 }
 
 /* About Me */
-
 .about-me.row {
   padding-top: 60px;
 }
@@ -199,6 +199,35 @@ nav .navbar-nav li a {
     padding-top: -20vw;
   }
 }
+
+/* bitmoji Wobble animation */
+.wobble {
+  animation: wobble 10s 3s ease;
+}
+@keyframes wobble {
+  from {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(3deg);
+  }
+  4% {
+    transform: rotate(-3deg);
+  }
+  6% {
+    transform: rotate(3deg);
+  }
+  8% {
+    transform: rotate(-3deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 /* signature animation */
 .signaturePath {
   transform: translateY(5%);
@@ -223,6 +252,25 @@ nav .navbar-nav li a {
   font-size: 19px;
   line-height: 2;
 }
+
+.slide-in-from-right {
+  animation: slide-from-right 0.5s 0s ease forwards;
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .about-me-p {
     padding-right: 50px;
