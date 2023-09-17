@@ -65,12 +65,14 @@ nav .navbar-nav li a {
 .typedMessage {
   padding-top: 13rem;
   padding-bottom: 3rem;
-  color: #f1f1f1;
+  color: #f1ebeb;
   text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.54);
 }
 .typedMessage h1 {
-  font-weight: 700;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 900 !important;
   margin-right: auto;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 800px) {
@@ -202,30 +204,38 @@ nav .navbar-nav li a {
 
 /* bitmoji Wobble animation */
 .wobble {
-  animation: wobble 10s 3s ease;
+  animation: wobble 15s 3s ease infinite;
 }
 @keyframes wobble {
   from {
     transform: rotate(0deg);
   }
+  1% {
+    transform: rotate(3deg);
+  }
   2% {
+    transform: rotate(-3deg);
+  }
+  3% {
     transform: rotate(3deg);
   }
   4% {
     transform: rotate(-3deg);
   }
-  6% {
-    transform: rotate(3deg);
-  }
-  8% {
-    transform: rotate(-3deg);
-  }
-  10% {
+  5% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(0);
   }
+}
+
+svg {
+  filter:
+  /* Glow */ drop-shadow(0px 0px 4px rgb(251 72 196))
+    drop-shadow(0px 0px 3px rgb(251 72 196))
+    drop-shadow(0px 0px 1px rgb(251 72 196)) /* Shadow */
+    drop-shadow(5px 6px 0px rgb(0 0 0));
 }
 
 /* signature animation */
@@ -234,11 +244,7 @@ nav .navbar-nav li a {
   padding-bottom: 40px;
   stroke-dasharray: 920;
   stroke-dashoffset: 920;
-  filter:
-  /* Glow */ drop-shadow(0px 0px 4px rgb(251 72 196))
-    drop-shadow(0px 0px 3px rgb(251 72 196))
-    drop-shadow(0px 0px 1px rgb(251 72 196)) /* Shadow */
-    drop-shadow(5px 6px 0px rgb(0 0 0));
+  transform: translateZ(0);
 }
 
 .signature-animation-toggle {
@@ -251,6 +257,8 @@ nav .navbar-nav li a {
   text-align: left;
   font-size: 19px;
   line-height: 2;
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .slide-in-from-right {

@@ -93,18 +93,39 @@ document.querySelectorAll("#hacker").forEach((h1) => {
 });
 
 // Observer Togglers aka start animation on window scroll ABOUT ME Section
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      // svg path animation
-      document
-        .querySelector(".signaturePath")
-        .classList.add("signature-animation-toggle");
-      // bitmoji animation
-      document.querySelector(".bitmoji").classList.add("wobble");
-      // slide animation on p
-      entry.target.classList.add("slide-in-from-right");
-    }
-  });
-});
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // slide animation on p
+        entry.target.classList.add("slide-in-from-right");
+      }
+    });
+  },
+  // intersect at center of viewport instead of bottom
+  {
+    rootMargin: "0px 0px -18% 0px",
+  }
+);
 observer.observe(document.querySelector(".about-me-p"));
+
+// Controls signature and bitmoji animation
+const observerTwo = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // svg path animation
+        document
+          .querySelector(".signaturePath")
+          .classList.add("signature-animation-toggle");
+        // bitmoji animation
+        document.querySelector(".bitmoji").classList.add("wobble");
+      }
+    });
+  },
+  // intersect at center of viewport instead of bottom
+  {
+    rootMargin: "0px 0px -15% 0px",
+  }
+);
+observerTwo.observe(document.querySelector(".sign-svg"));
