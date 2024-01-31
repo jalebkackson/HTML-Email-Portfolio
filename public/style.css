@@ -1,28 +1,14 @@
 body {
-  background: rgb(255, 0, 159);
-  background: linear-gradient(
-      318deg,
-      rgba(255, 0, 159, 1) 0%,
-      rgba(255, 0, 0, 1) 45%,
-      rgba(255, 0, 0, 1) 55%,
-      rgba(255, 117, 0, 1) 100%
-    )
-    no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background: lin;
+  background: url(assets/Images/DarkPattern.png) fixed;
   overflow-y: auto;
   overflow-x: hidden;
   color: #f1f1f1;
 }
 
 .navbar {
-  background: rgba(255, 238, 0, 0.405);
+  background: rgba(255, 179, 0, 0.797);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
-
 a.navbar-brand {
   margin-left: 15px;
   margin-bottom: -19px;
@@ -36,31 +22,44 @@ a.navbar-brand {
 a.navbar-brand:hover {
   pointer-events: none;
 }
-
 .nav-item {
   padding: 0 18px;
   font-weight: 700;
   font-size: 20px;
 }
-
 nav .navbar-nav li a:hover {
   color: rgb(255, 0, 149);
 }
-
 nav .navbar-nav li a {
   color: rgb(60, 60, 60);
-  /* padding-bottom: 25px; */
-  /* text-shadow: 0 1px 6px rgb(0 0 0); */
 }
-
 .navbar-toggler {
   margin-right: 15px;
 }
 
 /* HERO Section */
 .hero-section {
+  background: linear-gradient(
+        180deg,
+        rgba(206, 73, 147) 0%,
+        rgb(224, 34, 53) 45%,
+        rgb(255, 121, 63) 92%
+      )
+      no-repeat center center fixed,
+    rgba(0, 0, 0, 0.675);
+
+  box-shadow: inset 50px 20px 50px -50px rgba(0, 0, 0, 1),
+    inset -50px 50px 50px -50px rgba(0, 0, 0, 1);
   height: 100vh;
   min-height: 700px;
+  position: relative;
+  -webkit-mask: url(assets/Images/skyline.png) center/contain no-repeat,
+    linear-gradient(#fff 0 0);
+  mask-position: bottom;
+  mask-repeat: no-repeat;
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  margin-bottom: -2px;
 }
 .typedMessage {
   padding-top: 13rem;
@@ -107,7 +106,6 @@ nav .navbar-nav li a {
     font-size: 78px;
   }
 }
-
 /* Caret */
 .mySpan {
   background-color: rgb(255, 196, 0);
@@ -137,13 +135,11 @@ nav .navbar-nav li a {
 .contact-me-btn {
   padding: 100px 0 150px 0;
 }
-
 .btn-outline-warning {
   color: rgb(255, 204, 0);
   border-color: rgb(255, 179, 0);
   padding: 10px 120px;
 }
-
 .btn-outline-warning:hover {
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
@@ -151,7 +147,6 @@ nav .navbar-nav li a {
   border: none;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.495);
 }
-
 .btn-outline-warning:active {
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
@@ -162,7 +157,7 @@ nav .navbar-nav li a {
 
 /* this Section selector controls the main div of all sections */
 .section {
-  padding: 100px 30px;
+  padding: 100px 0 0 0;
   margin: auto 0;
   text-align: center;
   justify-content: center;
@@ -172,25 +167,37 @@ nav .navbar-nav li a {
   font-size: 50px;
   padding: 20px 0;
   color: rgb(255, 255, 255);
-  text-shadow: 7px 7px 4px rgba(0, 0, 0, 0.495);
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.495);
 }
 
 .header-line {
   width: 60%;
-  border: 1px solid rgba(255, 179, 0, 0.831);
+  border: 1px solid rgb(238, 175, 97);
   border-radius: 100%;
   margin: auto;
 }
 
-.row-one {
-  padding-top: 40px;
+/* HEADER styling for dark sections */
+h1.dark {
+  text-shadow: 0px 0px 20px rgb(255, 0, 102);
+  color: rgb(255, 255, 255);
+}
+.header-line-dark {
+  width: 60%;
+  border: 1px solid rgba(255, 0, 119, 0.52);
+  border-radius: 100%;
+  margin: auto;
 }
 
-/* About Me */
+/*About-Me Section */
+.about-me.dark {
+  /* url(assets/Images/v882-kul-41-a.jpg);
+  background-size: 100% auto; */
+  padding-bottom: 50px;
+}
 .about-me.row {
-  padding-top: 60px;
+  padding: 60px 20px 75px 30px;
 }
-
 @media screen and (max-width: 768px) {
   .bitmoji {
     width: 50%;
@@ -201,7 +208,6 @@ nav .navbar-nav li a {
     padding-top: -20vw;
   }
 }
-
 /* bitmoji Wobble animation */
 .wobble {
   animation: wobble 15s 3s ease infinite;
@@ -230,6 +236,7 @@ nav .navbar-nav li a {
   }
 }
 
+/* signature animation */
 svg {
   filter:
   /* Glow */ drop-shadow(0px 0px 4px rgb(251 72 196))
@@ -237,8 +244,6 @@ svg {
     drop-shadow(0px 0px 1px rgb(251 72 196)) /* Shadow */
     drop-shadow(5px 6px 0px rgb(0 0 0));
 }
-
-/* signature animation */
 .signaturePath {
   transform: translateY(5%);
   padding-bottom: 40px;
@@ -246,7 +251,6 @@ svg {
   stroke-dashoffset: 920;
   transform: translateZ(0);
 }
-
 .signature-animation-toggle {
   animation: sign 1.5s 0s linear forwards, turnOn 0.8s 1.8s forwards,
     flicker 4s 5s linear infinite;
@@ -262,16 +266,15 @@ svg {
 }
 
 .slide-in-from-right {
-  animation: slide-from-right 0.5s 0s ease forwards;
+  animation: slide-from-right 1.2s 0s ease forwards;
 }
-
 @keyframes slide-from-right {
   from {
     transform: translateX(100%);
     opacity: 0.4;
   }
-  30% {
-    transform: translateX(-15%);
+  50% {
+    transform: translateX(-2%);
   }
   100% {
     transform: translateX(0);
@@ -292,66 +295,40 @@ svg {
 }
 
 .skills-section {
-  padding-top: 200px;
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0) 0%,
-      rgb(1, 61, 83) 22%,
-      /* rgba(177, 66, 1, 0.86) 35%, */ rgb(0, 0, 0, 0) 40%
-    )
-    no-repeat center center;
+  padding-top: 40px;
+  background: rgba(0, 0, 0, 0.624),
+    url(assets/Images/diamondpattern500.jpg) repeat;
 }
-
 .skills {
   text-align: center;
   justify-content: center;
 }
-
 /* skills text */
 .skills h5 {
   padding-top: 15px;
   text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.495);
 }
-
 .skill {
   padding: 40px 0;
 }
-
 .skill img {
   width: 35%;
   max-width: 150px;
   min-width: 60px;
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.601));
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.601));
+  -webkit-filter: drop-shadow(0px 0px 5px rgb(255, 0, 170));
+  filter: drop-shadow(0px 0px 7px rgb(255, 0, 149));
+  -webkit-filter: drop-shadow(0px 0px 20px rgb(255, 0, 170));
+  filter: drop-shadow(0px 0px 15px 1px rgb(255, 0, 170));
 }
 
-/*Portfolio Section */
 .portfolio {
-  background: linear-gradient(
-      180deg,
-      rgb(255, 255, 255, 0) 0%,
-      rgb(30, 0, 53) 27%,
-      rgb(0, 0, 0) 45%
-    )
-    no-repeat center center;
 }
-
-h1.dark {
-  text-shadow: 2px 2px 7px rgba(254, 154, 194, 0.962);
-  color: rgba(255, 198, 221, 0.899);
-}
-
-.header-line-dark {
-  width: 60%;
-  border: 1px solid rgba(254, 136, 183, 0.76);
-  border-radius: 100%;
-  margin: auto;
-}
-
 .projects.row-one {
   padding-top: 70px;
 }
-
+.row-one {
+  padding-top: 40px;
+}
 .project {
   padding: 40px 0;
 }
@@ -362,7 +339,6 @@ h1.dark {
   -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 0, 212, 0.854));
   filter: drop-shadow(0px 0px 10px rgba(255, 0, 212, 0.875));
 }
-
 .portfolio h5 {
   text-shadow: 0px 0px 15px rgb(255, 0, 170);
   text-shadow: 0px 0px 15px rgb(255, 0, 170);
