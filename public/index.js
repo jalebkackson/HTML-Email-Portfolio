@@ -1,9 +1,6 @@
 // import { getElements, getElementsByTagType, getElementById } from "domutils";
-
 /**
- *
  *  TYPEWRITER
- *
  */
 let messageArray = ["Hey", "I'm Caleb,", "An Email Developer"];
 var textPosition = 0;
@@ -53,9 +50,6 @@ const typewriter3 = () => {
 };
 window.addEventListener("load", typewriter);
 
-//
-//
-//
 //
 // Hacker animation on text
 // const letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
@@ -129,3 +123,38 @@ const observerTwo = new IntersectionObserver(
   }
 );
 observerTwo.observe(document.querySelector(".sign-svg"));
+
+// EMAIL CONTACT FORM
+const contactForm = document.querySelector(".contact-form");
+
+let name = document.getElementById("name");
+let email = document.getElementById("email");
+let message = document.getElementById("contactMessage");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(name.value, email.value, message.value);
+  let formData = {
+    name: name.value,
+    email: email.value,
+    message: message.value,
+  };
+
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "/");
+  xhr.setRequestHeader("content-type", "application/json");
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+
+    if (xhr.responseText == "success") {
+      alert("Message Delivered 👍🏼");
+      name.value = "";
+      email.value = "";
+      message.value = "";
+    } else {
+      alert("something went wrong");
+    }
+  };
+
+  xhr.send(JSON.stringify(formData));
+});
