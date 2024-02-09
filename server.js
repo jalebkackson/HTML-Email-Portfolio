@@ -38,7 +38,7 @@ app.post("/", (req, res) => {
     },
   });
   const mailOptions = {
-    subject: `Message from ${req.body.email}: ${req.body.name}`,
+    subject: `${req.body.name}, c`,
     from: email,
     to: email,
     html: message,

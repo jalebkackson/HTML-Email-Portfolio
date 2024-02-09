@@ -133,7 +133,6 @@ let message = document.getElementById("contactMessage");
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(name.value, email.value, message.value);
   let formData = {
     name: name.value,
     email: email.value,
@@ -143,7 +142,7 @@ contactForm.addEventListener("submit", (e) => {
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "/");
   xhr.setRequestHeader("content-type", "application/json");
-  xhr.onload = function () {
+  xhr.onload = function (e) {
     console.log(xhr.responseText);
 
     if (xhr.responseText == "success") {
@@ -153,6 +152,7 @@ contactForm.addEventListener("submit", (e) => {
       message.value = "";
     } else {
       alert("something went wrong");
+      console.log(e);
     }
   };
 

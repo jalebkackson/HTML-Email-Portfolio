@@ -170,29 +170,25 @@ nav .navbar-nav li a {
 }
 
 .section-header {
-  font-size: 50px;
+  font-size: 70px;
   padding: 20px 0;
   color: rgb(255, 255, 255);
-  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.495);
+  text-shadow: 4px 0px 2px rgb(0, 208, 255), -4px 0px 2px rgb(255, 0, 68);
 }
 
 .header-line {
   width: 60%;
-  border: 1px solid rgb(238, 175, 97);
+  border: 1px solid rgba(255, 255, 255);
   border-radius: 100%;
   margin: auto;
-}
-
-/* HEADER styling for dark sections */
-h1.dark {
-  text-shadow: 0px 0px 20px rgb(255, 0, 102);
-  color: rgb(255, 255, 255);
-}
-.header-line-dark {
-  width: 60%;
-  border: 1px solid rgba(255, 0, 119, 0.52);
-  border-radius: 100%;
-  margin: auto;
+  /* Neon Glow */
+  filter: drop-shadow(0px 0px 4px rgb(251 72 196))
+    drop-shadow(0px 0px 3px rgb(251 72 196))
+    drop-shadow(0px 0px 1px rgb(251 72 196)) drop-shadow(5px 6px 0px rgb(0 0 0));
+  -webkit-filter: drop-shadow(0px 0px 4px rgb(251 72 196))
+    drop-shadow(0px 0px 3px rgb(251 72 196))
+    drop-shadow(0px 0px 1px rgb(251 72 196)) drop-shadow(5px 6px 0px rgb(0 0 0));
+  animation: flicker 4s 5s linear infinite;
 }
 
 /*About-Me Section */
@@ -320,10 +316,9 @@ svg {
   width: 35%;
   max-width: 150px;
   min-width: 60px;
-  -webkit-filter: drop-shadow(0px 0px 5px rgb(255, 0, 170));
-  filter: drop-shadow(0px 0px 7px rgb(255, 0, 149));
-  -webkit-filter: drop-shadow(0px 0px 20px rgb(255, 0, 170));
-  filter: drop-shadow(0px 0px 15px 1px rgb(255, 0, 170));
+  -webkit-filter: drop-shadow(0px 0px 15px rgb(255, 0, 149));
+  filter: drop-shadow(-10px 0px 10px rgb(0, 208, 255))
+    drop-shadow(10px 0px 10px rgb(255, 0, 0));
 }
 
 .portfolio {
@@ -342,12 +337,10 @@ svg {
   max-width: 350px;
   min-width: 60px;
   border-radius: 10px;
+  border: solid 3px rgb(22, 145, 233);
+  border-bottom: solid 20px rgb(22, 145, 233);
   -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 0, 212, 0.854));
   filter: drop-shadow(0px 0px 10px rgba(255, 0, 212, 0.875));
-}
-.portfolio h5 {
-  text-shadow: 0px 0px 15px rgb(255, 0, 170);
-  text-shadow: 0px 0px 15px rgb(255, 0, 170);
 }
 
 /* animating signature action */
@@ -524,7 +517,7 @@ svg {
   margin-bottom: 80px;
 }
 .contact-form {
-  background-color: #152742d5;
+  background-color: #152742ac;
   color: rgb(69, 205, 240);
   border-style: solid;
   border-width: 1px;
