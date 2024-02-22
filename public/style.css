@@ -6,8 +6,8 @@ body {
 }
 
 .navbar {
-  background: rgba(255, 179, 0, 0.895);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 140, 0, 0);
+  padding-top: 15px;
 }
 a.navbar-brand {
   margin-left: 15px;
@@ -15,7 +15,7 @@ a.navbar-brand {
   margin-top: -15px;
   font-size: 30px;
   font-weight: 700;
-  color: rgb(57, 50, 50);
+  color: rgb(231, 226, 224);
   pointer-events: none;
   padding-bottom: 10px;
 }
@@ -31,7 +31,7 @@ nav .navbar-nav li a:hover {
   color: rgb(255, 0, 149);
 }
 nav .navbar-nav li a {
-  color: rgb(60, 60, 60);
+  /* color: rgb(255, 255, 255); */
 }
 .navbar-toggler {
   margin-right: 15px;
@@ -42,7 +42,7 @@ nav .navbar-nav li a {
   background: linear-gradient(
         180deg,
         rgb(90, 1, 117) 0%,
-        rgba(206, 73, 147) 15%,
+        rgb(185, 39, 119) 15%,
         rgb(224, 34, 53) 55%,
         rgb(255, 121, 63) 92%
       )
@@ -140,6 +140,9 @@ nav .navbar-nav li a {
 
 .contact-me-btn {
   padding: 50px 0 150px 0;
+}
+.contact-me-btn p {
+  padding-top: 10px;
 }
 .btn-outline-warning {
   color: rgb(255, 204, 0);
@@ -365,10 +368,32 @@ svg {
   }
 }
 .project h3 {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   z-index: 1;
   position: relative;
-  text-shadow: 0px -10px 15px rgb(0, 0, 0);
+  /* text-shadow: 0px -10px 15px rgb(0, 0, 0); */
+  --bg-size: 400px;
+  --color-one: hsl(156, 100%, 74%);
+  --color-two: rgb(111, 242, 251);
+  font-size: 2.3rem;
+  font-weight: 900;
+  /* background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: move-bg 5s infinite linear; */
+  color: var(--color-two);
+}
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 100%;
+  }
 }
 /* required for animation to work */
 @property --bg-angle {
@@ -397,7 +422,7 @@ svg {
       )
       border-box;
 
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   &:hover {
     animation-play-state: running;
   }
@@ -567,7 +592,7 @@ svg {
     opacity: 0.95;
   }
 
-  97% {
+  96% {
     opacity: 0.73;
   }
 
@@ -582,11 +607,13 @@ svg {
 }
 .contact-form {
   background-color: #152742ac;
-  color: rgb(69, 205, 240);
-  -webkit-box-shadow: inset 0 0 15px rgb(0, 217, 255);
+  color: rgb(111, 242, 251);
+  -webkit-box-shadow: inset 0 0 12px rgb(0, 217, 255);
   border-style: solid;
   border-width: 1px;
   border-radius: 15px;
+  /* outline: 1px solid rgb(146, 223, 242);
+  outline-offset: -4px; */
   padding: 20px;
   padding-bottom: 30px;
   animation: flicker 9s infinite linear;
@@ -602,7 +629,7 @@ svg {
   color: rgba(69, 206, 240, 0.445) !important;
 }
 .form-control:focus {
-  border-color: rgba(69, 206, 240, 0.884) !important;
+  border-color: rgb(111, 242, 251) !important;
   box-shadow: inset 0 1px 1px rgba(69, 206, 240, 0.76),
     0 0 8px rgba(69, 205, 240, 0.6) !important;
   background-color: #22363f !important;
@@ -639,4 +666,9 @@ textarea#contactMessage.form-control {
     margin-left: 20%;
     margin-right: 20%;
   }
+}
+
+footer {
+  align-content: center;
+  text-align: center;
 }

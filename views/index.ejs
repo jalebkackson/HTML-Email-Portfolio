@@ -40,46 +40,50 @@
   </head>
 
   <body>
-    <!-- Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
-      <div class="container-fluid">
-        <a class="navbar-brand" data-value="Caleb Jackson" id="hacker" href="#"
-          >Caleb Jackson</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item ms-auto">
-              <a class="nav-link" href="#about">About me</a>
-            </li>
-            <li class="nav-item ms-auto">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item ms-auto">
-              <a class="nav-link" href="#portfolio">Projects</a>
-            </li>
-            <li class="nav-item ms-auto">
-              <a class="nav-link" href="#contactMe">Contact Me</a>
-            </li>
-            <li class="nav-item ms-auto">
-              <a class="nav-link" href="">Resume</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <!-- Hero Section -->
     <div class="hero-section">
+      <!-- Nav -->
+      <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            data-value="Caleb Jackson"
+            id="hacker"
+            href="#"
+            >Caleb Jackson</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item ms-auto">
+                <a class="nav-link" href="#about">About me</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <a class="nav-link" href="#portfolio">Projects</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <a class="nav-link" href="#contactMe">Contact Me</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <a class="nav-link" href="">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <!-- Typed Message -->
       <div class="typedMessage container">
         <h1 id="message0"><span id="mySpan"></span></h1>
@@ -88,12 +92,14 @@
       </div>
       <!-- Contact Button -->
       <div class="text-center container contact-me-btn">
-        <button
-          type="button"
-          class="btn btn-outline-warning btn-lg contactMeBtn"
-        >
-          <a class="nav-link" href="#contactMe">Contact Me</a>
-        </button>
+        <a href="#contactMe">
+          <button
+            type="button"
+            class="btn btn-outline-warning btn-lg contactMeBtn"
+          >
+            <p class="nav-link">Contact Me</p>
+          </button>
+        </a>
       </div>
     </div>
 
@@ -105,7 +111,6 @@
       <div class="about-me row">
         <div class="col-md bitmoji-signature">
           <!-- make it so that the bitmoji changes to provocqtive after scrolling back up -->
-          <img src="https://i.imgur.com/mRtrKcv.png" class="bitmoji" />
           <svg
             class="sign-svg"
             version="1.1"
@@ -130,6 +135,7 @@
               />
             </g>
           </svg>
+          <img src="https://i.imgur.com/mRtrKcv.png" class="bitmoji" />
         </div>
         <div class="col-md about-me-p">
           <p>
@@ -287,6 +293,10 @@
           </div>
         </div>
       </form>
+    </div>
+    <!-- Needs a footer -->
+    <div class="flexbox">
+      <footer><p>CalebGideon.com 2024</p></footer>
     </div>
   </body>
   <script src="/index.js"></script>
