@@ -26,8 +26,9 @@ const email = process.env.EMAIL;
 const pass = process.env.PASS;
 
 app.post("/", (req, res) => {
-  const message = `<p>email: ${req.body.email}</p>
-  <p>name: ${req.body.name}<p/>
+  const message = `<h3>email: ${req.body.email}</h3>
+  <h3>name: ${req.body.name}</h3>
+  
   <p/>${req.body.message}<p/>`;
 
   const transporter = nodemailer.createTransport({

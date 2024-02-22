@@ -124,6 +124,22 @@ const observerTwo = new IntersectionObserver(
 );
 observerTwo.observe(document.querySelector(".sign-svg"));
 
+const observerThree = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("blow-up");
+        console.log(entries);
+      }
+    });
+  },
+  { rootMargin: "0px 0px -15% 0px" }
+);
+// observerThree.observe(document.querySelector(".one"));
+// observerThree.observe(document.querySelector(".two"));
+// observerThree.observe(document.querySelector(".three"));
+// observerThree.observe(document.querySelector(".four"));
+
 // EMAIL CONTACT FORM
 const contactForm = document.querySelector(".contact-form");
 
@@ -152,7 +168,6 @@ contactForm.addEventListener("submit", (e) => {
       message.value = "";
     } else {
       alert("something went wrong");
-      console.log(e);
     }
   };
 

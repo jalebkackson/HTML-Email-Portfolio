@@ -308,6 +308,8 @@ svg {
 .skills h5 {
   padding-top: 15px;
   text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.495);
+  position: relative;
+  z-index: 1;
 }
 .skill {
   padding: 40px 0;
@@ -351,6 +353,23 @@ svg {
 .project {
   padding: 40px 20px;
 }
+.blow-up {
+  animation: blowup 0.5s ease;
+}
+@keyframes blowup {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 60%;
+  }
+}
+.project h3 {
+  padding-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  text-shadow: 0px -10px 15px rgb(0, 0, 0);
+}
 /* required for animation to work */
 @property --bg-angle {
   inherits: false;
@@ -358,10 +377,10 @@ svg {
   syntax: "<angle>";
 }
 .project img {
-  width: 100%;
+  width: 60%;
   max-width: 350px;
   min-width: 60px;
-  border-radius: 50px;
+  border-radius: 20px;
   animation: spin 1.5s infinite linear paused, skill-glow 2s linear infinite;
   filter: drop-shadow(20px 20px 20px rgb(0, 0, 0));
   opacity: 85%;
@@ -564,11 +583,14 @@ svg {
 .contact-form {
   background-color: #152742ac;
   color: rgb(69, 205, 240);
+  -webkit-box-shadow: inset 0 0 15px rgb(0, 217, 255);
   border-style: solid;
   border-width: 1px;
   border-radius: 15px;
   padding: 20px;
   padding-bottom: 30px;
+  animation: flicker 9s infinite linear;
+  order: 1;
 }
 .contactH1 {
   font-weight: 700;
@@ -586,6 +608,9 @@ svg {
   background-color: #22363f !important;
   color: rgb(69, 205, 240);
 }
+/* .form-control:focus + .contact-form:focus {
+  animation-play-state: paused;
+} */
 input[type="text"],
 input[type="email"],
 textarea#contactMessage.form-control {
