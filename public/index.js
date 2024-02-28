@@ -102,6 +102,10 @@ const observer = new IntersectionObserver(
   }
 );
 observer.observe(document.querySelector(".about-me-p"));
+observer.observe(document.querySelector(".one"));
+observer.observe(document.querySelector(".two"));
+observer.observe(document.querySelector(".three"));
+observer.observe(document.querySelector(".four"));
 
 // Controls signature and bitmoji animation
 const observerTwo = new IntersectionObserver(
@@ -124,17 +128,17 @@ const observerTwo = new IntersectionObserver(
 );
 observerTwo.observe(document.querySelector(".sign-svg"));
 
-const observerThree = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("blow-up");
-        console.log(entries);
-      }
-    });
-  },
-  { rootMargin: "0px 0px -15% 0px" }
-);
+// const observerThree = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("blow-up");
+//         console.log(entries);
+//       }
+//     });
+//   },
+//   { rootMargin: "0px 0px -25% 0px" }
+// );
 // observerThree.observe(document.querySelector(".one"));
 // observerThree.observe(document.querySelector(".two"));
 // observerThree.observe(document.querySelector(".three"));

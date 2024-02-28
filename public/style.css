@@ -1,8 +1,12 @@
+html {
+  min-height: 100vh;
+}
 body {
   background: url(assets/Images/bgPattern.png) fixed;
   overflow-y: auto;
   overflow-x: hidden;
   color: #f1f1f1;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -16,8 +20,8 @@ a.navbar-brand {
   font-size: 30px;
   font-weight: 700;
   color: rgb(231, 226, 224);
-  pointer-events: none;
   padding-bottom: 10px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.62);
 }
 a.navbar-brand:hover {
   pointer-events: none;
@@ -28,7 +32,8 @@ a.navbar-brand:hover {
   font-size: 20px;
 }
 nav .navbar-nav li a:hover {
-  color: rgb(255, 0, 149);
+  color: rgb(255, 0, 187);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.498);
 }
 nav .navbar-nav li a {
   /* color: rgb(255, 255, 255); */
@@ -44,7 +49,9 @@ nav .navbar-nav li a {
         rgb(90, 1, 117) 0%,
         rgb(185, 39, 119) 15%,
         rgb(224, 34, 53) 55%,
-        rgb(255, 121, 63) 92%
+        rgb(255, 121, 63) 92%,
+        rgb(255, 121, 63) 99%,
+        rgba(255, 121, 63, 0) 100%
       )
       no-repeat center center fixed,
     rgba(0, 0, 0, 0.675);
@@ -67,7 +74,6 @@ nav .navbar-nav li a {
   text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.54);
 }
 .typedMessage h1 {
-  /* font-family: "Roboto", sans-serif !important; */
   font-weight: 800 !important;
   margin-right: auto;
   letter-spacing: 1px;
@@ -198,6 +204,7 @@ nav .navbar-nav li a {
 .about-me {
   padding-bottom: 50px;
   margin-top: 2px;
+  overflow: hidden;
 }
 .about-me.row {
   padding: 60px 20px 75px 30px;
@@ -270,7 +277,7 @@ svg {
 }
 
 .slide-in-from-right {
-  animation: slide-from-right 1.2s 0s ease forwards;
+  animation: slide-from-right 0.9s 0s ease forwards;
 }
 @keyframes slide-from-right {
   from {
@@ -300,8 +307,8 @@ svg {
 
 .skills-section {
   padding-top: 40px;
-  background: rgba(0, 0, 0, 0.624),
-    url(assets/Images/diamondpattern500.jpg) repeat;
+  padding-right: 10px;
+  overflow: hidden;
 }
 .skills {
   text-align: center;
@@ -346,9 +353,11 @@ svg {
 }
 
 .portfolio {
+  overflow: hidden;
 }
 .projects.row-one {
   padding-top: 70px;
+  overflow: hidden;
 }
 .row-one {
   padding-top: 40px;
@@ -356,46 +365,49 @@ svg {
 .project {
   padding: 40px 20px;
 }
-.blow-up {
-  animation: blowup 0.5s ease;
+
+.one,
+.two,
+.three,
+.four {
+  opacity: 0;
 }
-@keyframes blowup {
-  from {
-    width: 1px;
-  }
-  to {
-    width: 60%;
-  }
-}
+
 .project h3 {
   padding-bottom: 20px;
   z-index: 1;
   position: relative;
-  /* text-shadow: 0px -10px 15px rgb(0, 0, 0); */
-  --bg-size: 400px;
-  --color-one: hsl(156, 100%, 74%);
-  --color-two: rgb(111, 242, 251);
+  overflow: hidden;
   font-size: 2.3rem;
   font-weight: 900;
-  /* background: linear-gradient(
-      90deg,
+  color: rgb(0, 225, 255);
+  /* text-shadow: 0px -10px 15px rgb(0, 0, 0); */
+  /* --bg-size: 400px;
+  --color-one: hsl(197, 100%, 65%);
+  --color-two: rgb(251, 111, 249);
+  --color-three: rgba(255, 200, 0, 0);
+
+  background: linear-gradient(
+      45deg,
       var(--color-one),
-      var(--color-two),
-      var(--color-one)
+      var(--color-one) 80%,
+      var(--color-three) 99%
     )
     0 0 / var(--bg-size) 100%;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: move-bg 5s infinite linear; */
-  color: var(--color-two);
+  animation: move-bg 2s infinite linear; */
 }
-@keyframes move-bg {
+
+/* moving gradient on project title */
+/* @keyframes move-bg {
   to {
     background-position: var(--bg-size) 100%;
   }
-}
-/* required for animation to work */
+} */
+
+/* required for border animation to work */
 @property --bg-angle {
   inherits: false;
   initial-value: 0deg;
@@ -422,9 +434,10 @@ svg {
       )
       border-box;
 
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   &:hover {
     animation-play-state: running;
+    border-width: 5px;
   }
 }
 
@@ -606,9 +619,9 @@ svg {
   margin-bottom: 80px;
 }
 .contact-form {
-  background-color: #152742ac;
+  background-color: #1527429c;
   color: rgb(111, 242, 251);
-  -webkit-box-shadow: inset 0 0 12px rgb(0, 217, 255);
+  -webkit-box-shadow: inset 0 0 12px rgb(0, 217, 255), 0 0 12px rgb(0, 217, 255);
   border-style: solid;
   border-width: 1px;
   border-radius: 15px;
@@ -621,7 +634,7 @@ svg {
 }
 .contactH1 {
   font-weight: 700;
-  color: rgb(69, 205, 240);
+  color: rgb(111, 242, 251);
   text-align: center;
   font-size: 3rem;
 }
@@ -633,7 +646,7 @@ svg {
   box-shadow: inset 0 1px 1px rgba(69, 206, 240, 0.76),
     0 0 8px rgba(69, 205, 240, 0.6) !important;
   background-color: #22363f !important;
-  color: rgb(69, 205, 240);
+  color: rgb(111, 242, 251);
 }
 /* .form-control:focus + .contact-form:focus {
   animation-play-state: paused;
@@ -642,8 +655,8 @@ input[type="text"],
 input[type="email"],
 textarea#contactMessage.form-control {
   background-color: #32515f;
-  border-color: rgb(69, 205, 240);
-  color: rgb(69, 205, 240);
+  border-color: rgb(111, 242, 251);
+  color: rgb(111, 242, 251);
   margin-top: 30px;
 }
 .submitBtn {
