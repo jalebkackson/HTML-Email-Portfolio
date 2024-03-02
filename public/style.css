@@ -22,7 +22,7 @@ a.navbar-brand {
   font-weight: 700;
   color: rgb(231, 226, 224);
   padding-bottom: 10px;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.62);
+  text-shadow: 6px 6px 4px rgb(0, 0, 0);
 }
 a.navbar-brand:hover {
   pointer-events: none;
@@ -47,9 +47,10 @@ nav .navbar-nav li a {
 .hero-section {
   background: linear-gradient(
         180deg,
-        rgb(185, 39, 119) 15%,
-        rgb(224, 34, 53) 55%,
-        rgb(255, 121, 63) 90%
+        oklch(5% 0.193 352) 0%,
+        oklch(44% 0.25 352) 35%,
+        oklch(58% 0.22 29.5) 65%,
+        oklch(72.46% 0.178 42.3) 90%
       )
       no-repeat center center fixed,
     rgba(0, 0, 0, 0.675);
@@ -72,9 +73,9 @@ nav .navbar-nav li a {
   text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.54);
 }
 .typedMessage h1 {
-  font-weight: 800 !important;
+  font-weight: 900 !important;
   margin-right: auto;
-  letter-spacing: 1px;
+  letter-spacing: -2px;
 }
 
 @media (min-width: 900px) {
