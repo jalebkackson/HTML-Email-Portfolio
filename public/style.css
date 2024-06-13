@@ -297,6 +297,10 @@ svg {
   padding: 1vw;
 }
 
+/* .about-me-p-wrapper {
+  margin-right: px;
+} */
+
 .slide-in-from-right {
   animation: slide-from-right 0.9s 0s ease forwards;
 }
