@@ -1,6 +1,11 @@
 html {
   min-height: 100vh;
 }
+
+:root {
+  --opacity: 1;
+}
+
 body {
   background: url(assets/Images/Space_Background.jpg) fixed;
   background-size: 90%;
@@ -47,13 +52,13 @@ nav .navbar-nav li a {
 .hero-section {
   background: linear-gradient(
         180deg,
-        oklch(5% 0.193 352) 0%,
-        oklch(44% 0.25 352) 35%,
-        oklch(58% 0.22 29.5) 65%,
-        oklch(72.46% 0.178 42.3) 90%
+        oklch(5% 0.193 352 / var(--opacity)) 0%,
+        oklch(44% 0.25 352 / var(--opacity)) 35%,
+        oklch(58% 0.22 29.5 / var(--opacity)) 65%,
+        oklch(72.46% 0.178 42.3 / var(--opacity)) 90%
       )
       no-repeat center center fixed,
-    rgba(0, 0, 0, 0.675);
+    rgba(0, 0, 0, 0.25);
   box-shadow: inset 40px 10px 40px -40px rgba(0, 0, 0, 1),
     inset -40px 20px 40px -40px rgba(0, 0, 0, 1);
   height: 96vh;
@@ -266,13 +271,30 @@ svg {
     flicker 4s 5s linear infinite;
 }
 
+.bitmoji {
+  margin-right: 50px;
+  width: 60%;
+  filter: drop-shadow(5px 4px 10px black);
+}
+
 .about-me-p {
-  padding-top: 50px;
+  margin-top: 50px;
+  padding: 40px;
   text-align: left;
-  font-size: 19px;
-  line-height: 2;
+  font-size: 20px;
+  line-height: 1.5;
   transform: translateX(100%);
   opacity: 0;
+  background-color: #2439585c;
+  /* color: rgb(111, 242, 251); */
+  -webkit-box-shadow: inset 0 0 12px rgb(0, 217, 255), 0 0 12px rgb(0, 217, 255);
+  border: 1px solid;
+  border-radius: 30px;
+  max-width: 650px;
+}
+
+.about-me-p p {
+  padding: 1vw;
 }
 
 .slide-in-from-right {
@@ -295,13 +317,12 @@ svg {
 @media screen and (min-width: 768px) {
   .about-me-p {
     padding-right: 50px;
-    padding-top: 7vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .about-me {
-    padding-right: 50px;
-  }
+  /* .about-me {
+    justify-content: center;
+    align-items: center; */
 }
 
 .skills-section {
@@ -381,30 +402,7 @@ svg {
   font-weight: 900;
   color: rgb(0, 225, 255);
   text-shadow: 2px -5px 10px rgb(0, 0, 0);
-  /* --bg-size: 400px;
-  --color-one: oklch(40.1% 0.123 21.57%);
-  --color-two: rgb(251, 111, 249);
-  --color-three: rgb(255, 200, 0);
-
-  background: linear-gradient(
-      45deg,
-      var(--color-three),
-      var(--color-two),
-      var(--color-three)
-    )
-    0 0 / var(--bg-size) 100%;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: move-bg 2s infinite linear; */
 }
-
-/* moving gradient on project title */
-/* @keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 100%;
-  }
-} */
 
 /* required for border animation to work */
 @property --bg-angle {
@@ -415,9 +413,11 @@ svg {
 .project img {
   width: 60%;
   max-width: 350px;
+  object-fit: cover;
+  max-height: 577px;
   min-width: 60px;
   border-radius: 20px;
-  animation: spin 3s infinite linear paused, skill-glow 2s linear infinite;
+  animation: spin 3s infinite linear paused;
   filter: drop-shadow(20px 20px 20px rgb(0, 0, 0));
 
   background: linear-gradient(
@@ -441,7 +441,7 @@ svg {
       )
       border-box;
 
-  border: 6px solid transparent;
+  border: 3px solid transparent;
   &:hover {
     animation-play-state: running;
   }
