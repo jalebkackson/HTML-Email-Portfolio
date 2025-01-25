@@ -50,13 +50,7 @@ nav .navbar-nav li a {
 
 /* HERO Section */
 .hero-section {
-  background: linear-gradient(
-        180deg,
-        oklch(5% 0.193 352 / var(--opacity)) 0%,
-        oklch(44% 0.25 352 / var(--opacity)) 35%,
-        oklch(58% 0.22 29.5 / var(--opacity)) 65%,
-        oklch(72.46% 0.178 42.3 / var(--opacity)) 90%
-      )
+  background: url(https://i.imgur.com/doFsiDX.png)
       no-repeat center center fixed,
     rgba(0, 0, 0, 0.25);
   box-shadow: inset 40px 10px 40px -40px rgba(0, 0, 0, 1),
