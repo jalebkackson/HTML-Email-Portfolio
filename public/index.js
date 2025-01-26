@@ -2,7 +2,7 @@
 /**
  *  TYPEWRITER
  */
-let messageArray = ["Hey", "I'm Caleb,", "An Email Developer"];
+let messageArray = ["Hey", "I'm Caleb,", "A Web Developer"];
 var textPosition = 0;
 // lower = faster
 var speed = 75;

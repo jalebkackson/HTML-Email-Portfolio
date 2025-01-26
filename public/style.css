@@ -20,6 +20,7 @@ body {
   padding-top: 15px;
 }
 a.navbar-brand {
+  visibility: hidden;
   margin-left: 15px;
   margin-bottom: -19px;
   margin-top: -15px;
@@ -27,7 +28,7 @@ a.navbar-brand {
   font-weight: 700;
   color: rgb(231, 226, 224);
   padding-bottom: 10px;
-  text-shadow: 6px 6px 4px rgb(0, 0, 0);
+  text-shadow: 3px 3px 4px rgb(0, 0, 0);
 }
 a.navbar-brand:hover {
   pointer-events: none;
@@ -50,14 +51,12 @@ nav .navbar-nav li a {
 
 /* HERO Section */
 .hero-section {
-  background: url(https://i.imgur.com/Q8LgUdp.png)
-      no-repeat center center fixed,
-    rgba(0, 0, 0, 0.25);
-  background-size: 1700px;
-  box-shadow: inset 40px 10px 40px -40px rgba(0, 0, 0, 1),
-    inset -40px 20px 40px -40px rgba(0, 0, 0, 1);
-  height: 96vh;
-  min-height: 750px;
+  background: url(https://i.imgur.com/doFsiDX.png)
+      no-repeat center center fixed; 
+  /* box-shadow: inset 40px 10px 40px -40px rgba(0, 0, 0, 1),
+    inset -40px 20px 40px -40px rgba(0, 0, 0, 1); */
+  height: 92vh;
+  /* min-height: 750px; */
   /* mask */
   -webkit-mask: url(assets/Images/skyline.png), linear-gradient(#fff 0 0);
   mask-size: 80% auto;
@@ -66,14 +65,14 @@ nav .navbar-nav li a {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
-@media(min-width: 1400px){
+@media(min-height: 1000px){
   .hero-section {
-    background-size: 120%;
+    background-size: 200vh;
   }
 }
-@media(min-height: 900px){
+@media(max-height: 700px){
   .hero-section {
-    background-size: 180vh;
+    background-size: 200vh;
   }
 }
 .typedMessage {
@@ -129,7 +128,7 @@ nav .navbar-nav li a {
 }
 /* Caret */
 .mySpan {
-  background-color: rgb(255, 196, 0);
+  background-color: rgb(0, 221, 255);
   color: rgb(149, 75, 252, 0);
   display: inline-block;
   animation: blinker 1s linear infinite, smoothCaret 0.18s;
@@ -160,16 +159,20 @@ nav .navbar-nav li a {
   padding-top: 10px;
 }
 .btn-outline-warning {
-  color: rgb(255, 204, 0);
-  border-color: rgb(255, 179, 0);
+  color: rgb(0, 221, 255);
+  border-width: 2px;
+  border-color: rgb(0, 221, 255);
+  background-color: #32515f4e;
   padding: 10px 120px;
+  font-weight: 700;
+  font-size: 25px;
 }
 .btn-outline-warning:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 221, 255);
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0);
+  background: rgba(255, 60, 0, 0.195);
   border: none;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.495);
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 .btn-outline-warning:active {
   color: rgb(255, 255, 255);
