@@ -39,7 +39,7 @@ app.post("/", (req, res) => {
     },
   });
   const mailOptions = {
-    subject: `${req.body.name}, c`,
+    subject: `Email form from: ${req.body.name}`,
     from: email,
     to: email,
     html: message,
