@@ -32,7 +32,7 @@ app.post("/", (req, res) => {
   <p/>${req.body.message}<p/>`;
 
   const transporter = nodemailer.createTransport({
-    service: "Hotmail",
+    service: "gmail",
     auth: {
       user: email,
       pass: pass,

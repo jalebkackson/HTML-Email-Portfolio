@@ -297,7 +297,7 @@ svg {
   /* color: rgb(111, 242, 251); */
   -webkit-box-shadow: inset 0 0 12px rgb(0, 217, 255), 0 0 12px rgb(0, 217, 255);
   border: 1px solid;
-  border-radius: 30px;
+  border-radius: 10px;
   max-width: 650px;
 }
 
@@ -360,7 +360,8 @@ svg {
   width: 35%;
   max-width: 150px;
   min-width: 60px;
-  animation: skill-glow 3s linear infinite;
+  filter: drop-shadow(4px 4px 5px rgb(0,0,0))
+  /* animation: skill-glow 3s linear infinite; */
 }
 
 @keyframes skill-glow {
@@ -429,7 +430,7 @@ svg {
   max-height: 577px;
   min-width: 60px;
   border-radius: 20px;
-  animation: spin 3s infinite linear paused;
+  /* animation: spin 3s infinite linear paused; */
   filter: drop-shadow(20px 20px 20px rgb(0, 0, 0));
 
   background: linear-gradient(
@@ -439,7 +440,7 @@ svg {
       )
       padding-box,
     /* ends at inner border edges */
-      conic-gradient(
+      /* conic-gradient(
         from var(--bg-angle),
         rgb(0, 0, 0, 0) 1deg,
         rgb(255, 0, 170) 45deg,
@@ -450,7 +451,7 @@ svg {
         rgba(0, 0, 0, 0) 270deg,
         rgb(0, 238, 255) 315deg,
         rgba(0, 0, 0, 0) 359deg
-      )
+      ) */
       border-box;
 
   border: 3px solid transparent;
