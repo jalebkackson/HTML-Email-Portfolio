@@ -26,29 +26,27 @@ const email = process.env.EMAIL;
 const pass = process.env.PASS;
 
 app.post("/", (req, res) => {
-  // define vars
-  const {name, email: userEmail, message, honey} = read.body;
+  const honey = req.body.honey;
 
-// 1. Honeypot field check (hidden field only bots would fill)
-if (honey && honey.length > 0) {
-  return res.status(400).send("Bot detected");
-}
-// 2. Server-side validation
-if (!name || name.length < 2) {
-  return res.status(400).send("Invalid name");
-}
-if (!userEmail || !/^\S+@\S+\.\S+$/.test(userEmail)) {
-  return res.status(400).send("Invalid email");
-}
-if (!message || message.trim().length < 10) {
-  return res.status(400).send("Message too short");
-}
+  // Bot honeypot check
+  if (honey && honey.length > 0) {
+    return res.status(400).send("Bot detected");
+  }
 
-  // Message
-  const formattedmMessage = `<h3>email: ${usereEmail}</h3>
-  <h3>name: ${name}</h3>
-  
-  <p/>${message}<p/>`;
+  // Basic validation
+  if (!req.body.name || req.body.name.length < 2) {
+    return res.status(400).send("Invalid name");
+  }
+  if (!req.body.email || !/^\S+@\S+\.\S+$/.test(req.body.email)) {
+    return res.status(400).send("Invalid email");
+  }
+  if (!req.body.message || req.body.message.trim().length < 10) {
+    return res.status(400).send("Message too short");
+  }
+
+  const message = `<h3>email: ${req.body.email}</h3>
+  <h3>name: ${req.body.name}</h3>
+  <p/>${req.body.message}<p/>`;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -57,20 +55,19 @@ if (!message || message.trim().length < 10) {
       pass: pass,
     },
   });
-
   const mailOptions = {
-    subject: `Email from: ${name}`,
+    subject: `Email from: ${req.body.name}`,
     from: email,
     to: email,
-    html: formattedMessage,
+    html: message,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log("mailer error: ", error);
+      console.log(error);
       res.send("error");
     } else {
-      console.log("email Sent: " + info.response);
+      console.log("email SeNt: " + info.response);
       res.send("success");
     }
   });
