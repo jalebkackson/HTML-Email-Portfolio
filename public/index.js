@@ -1,4 +1,9 @@
 // import { getElements, getElementsByTagType, getElementById } from "domutils";
+
+// script to fix viewport issues
+const vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 /**
  *  TYPEWRITER
  */

@@ -1,18 +1,17 @@
-html {
+/* html {
   min-height: 100vh;
-}
+} */
 
 :root {
   --opacity: 1;
 }
 
 body {
-  background: url(assets/Images/Space_Background.jpg) fixed;
+  background: url(assets/Images/Space_Background.jpg) scroll;
   background-size: 90%;
   overflow-y: auto;
   overflow-x: hidden;
   color: #f1f1f1;
-  min-height: 100vh;
 }
 
 .navbar {
@@ -42,21 +41,14 @@ nav .navbar-nav li a:hover {
   color: rgb(255, 0, 187);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.498);
 }
-nav .navbar-nav li a {
-  /* color: rgb(255, 255, 255); */
-}
 .navbar-toggler {
   margin-right: 15px;
 }
 
 /* HERO Section */
 .hero-section {
-  background: url(https://i.imgur.com/doFsiDX.png)
-      no-repeat center center fixed; 
-  /* box-shadow: inset 40px 10px 40px -40px rgba(0, 0, 0, 1),
-    inset -40px 20px 40px -40px rgba(0, 0, 0, 1); */
-  height: 92vh;
-  /* min-height: 750px; */
+  background: url(https://i.imgur.com/doFsiDX.png) no-repeat center bottom;
+  height: calc(var(--vh, 1vh) * 100);
   /* mask */
   -webkit-mask: url(assets/Images/skyline.png), linear-gradient(#fff 0 0);
   mask-size: 80% auto;
@@ -65,12 +57,20 @@ nav .navbar-nav li a {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
-@media(min-height: 1000px){
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
+    background-position: center;
+  }
+}
+
+@media (min-height: 1000px) {
   .hero-section {
     background-size: 200vh;
   }
 }
-@media(max-height: 700px){
+@media (max-height: 700px) {
   .hero-section {
     background-size: 200vh;
   }
@@ -360,7 +360,7 @@ svg {
   width: 35%;
   max-width: 150px;
   min-width: 60px;
-  filter: drop-shadow(4px 4px 5px rgb(0,0,0))
+  filter: drop-shadow(4px 4px 5px rgb(0, 0, 0));
   /* animation: skill-glow 3s linear infinite; */
 }
 
