@@ -47,7 +47,7 @@ nav .navbar-nav li a:hover {
 
 /* HERO Section */
 .hero-section {
-  background: url(https://i.imgur.com/doFsiDX.png) no-repeat center bottom;
+  background: url(https://i.imgur.com/doFsiDX.png) no-repeat center fixed;
   height: calc(var(--vh, 1vh) * 100);
   /* mask */
   -webkit-mask: url(assets/Images/skyline.png), linear-gradient(#fff 0 0);
@@ -56,13 +56,6 @@ nav .navbar-nav li a:hover {
   mask-repeat: repeat-x;
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
-}
-
-@media screen and (max-width: 768px) {
-  .hero-section {
-    background-attachment: scroll;
-    background-position: center;
-  }
 }
 
 @media (min-height: 1000px) {
@@ -413,7 +406,7 @@ svg {
   overflow: hidden;
   font-size: 2.3rem;
   font-weight: 900;
-  color: rgb(0, 225, 255);
+  color: rgb(220, 220, 220);
   text-shadow: 2px -5px 10px rgb(0, 0, 0);
 }
 
@@ -703,4 +696,5 @@ textarea#contactMessage.form-control {
 footer {
   align-content: center;
   text-align: center;
+  animation: flicker 9s infinite linear;
 }
